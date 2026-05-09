@@ -1,0 +1,292 @@
+.dashboard-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff7fb, #f5ecff, #eef7ff);
+  padding: 32px;
+  color: #2f2535;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.dashboard-header {
+  max-width: 1180px;
+  margin: 0 auto 32px;
+  padding: 28px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 18px 50px rgba(85, 57, 110, 0.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(14px);
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #7b3f91;
+}
+
+.dashboard-header p {
+  margin: 8px 0 0;
+  color: #765f82;
+}
+
+.user-box {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  background: #fff;
+  padding: 10px 12px 10px 18px;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(90, 68, 110, 0.1);
+}
+
+.user-box span {
+  font-size: 14px;
+  color: #6d5877;
+}
+
+.logout-btn,
+.add-btn,
+.ai-btn,
+.delete-btn {
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.logout-btn {
+  background: #f1e3ff;
+  color: #733c8c;
+  padding: 10px 16px;
+  border-radius: 999px;
+}
+
+.dashboard-content {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.form-card,
+.empty-state,
+.project-card {
+  background: rgba(255, 255, 255, 0.86);
+  border-radius: 26px;
+  box-shadow: 0 18px 45px rgba(94, 60, 116, 0.12);
+}
+
+.form-card {
+  padding: 26px;
+  position: sticky;
+  top: 24px;
+}
+
+.form-card h2,
+.projects-section h2 {
+  margin: 0;
+  color: #4b2e59;
+}
+
+.section-subtitle {
+  color: #806b89;
+  font-size: 14px;
+  margin: 8px 0 22px;
+}
+
+.form-card label {
+  display: block;
+  margin: 16px 0 8px;
+  font-weight: 700;
+  color: #5f4a69;
+}
+
+.form-card input,
+.form-card textarea,
+.form-card select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #eadcf1;
+  background: #fffafd;
+  border-radius: 16px;
+  padding: 13px 14px;
+  font-size: 15px;
+  outline: none;
+  color: #3d3044;
+}
+
+.form-card textarea {
+  resize: vertical;
+}
+
+.form-card input:focus,
+.form-card textarea:focus,
+.form-card select:focus {
+  border-color: #bb7bd1;
+  box-shadow: 0 0 0 4px rgba(187, 123, 209, 0.12);
+}
+
+.form-actions {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ai-btn {
+  background: #fff;
+  color: #7b3f91;
+  border: 1px solid #e6c9f0;
+  padding: 13px 16px;
+  border-radius: 16px;
+}
+
+.add-btn {
+  background: linear-gradient(135deg, #8e44ad, #c16dd8);
+  color: white;
+  padding: 14px 16px;
+  border-radius: 16px;
+  box-shadow: 0 10px 22px rgba(142, 68, 173, 0.25);
+}
+
+.ai-btn:hover,
+.add-btn:hover,
+.logout-btn:hover,
+.delete-btn:hover {
+  transform: translateY(-2px);
+}
+
+.ai-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.projects-section {
+  min-width: 0;
+}
+
+.section-title-row {
+  margin-bottom: 18px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.project-card {
+  padding: 22px;
+  border: 1px solid rgba(230, 207, 238, 0.7);
+}
+
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.project-card h3 {
+  margin: 0;
+  color: #4b2e59;
+  font-size: 20px;
+}
+
+.project-card p {
+  color: #6f5b78;
+  line-height: 1.55;
+  min-height: 72px;
+}
+
+.status-badge {
+  white-space: nowrap;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.status-badge.Planificat {
+  background: #eef3ff;
+  color: #4161a8;
+}
+
+.status-badge.În.progres,
+.status-badge.În\ progres {
+  background: #fff3d8;
+  color: #a66d00;
+}
+
+.status-badge.Finalizat {
+  background: #e9f8ef;
+  color: #2e8b57;
+}
+
+.project-card-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.project-card-footer small {
+  color: #9a879f;
+}
+
+.delete-btn {
+  background: #ffe8ee;
+  color: #b83256;
+  padding: 9px 12px;
+  border-radius: 12px;
+}
+
+.empty-state {
+  padding: 42px;
+  text-align: center;
+  color: #715a7a;
+}
+
+.empty-state h3 {
+  color: #4b2e59;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+
+  .form-card {
+    position: static;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .user-box {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .ai-error {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #ffe8ec;
+  color: #b83256;
+  font-size: 14px;
+  font-weight: 600;
+}
+}
