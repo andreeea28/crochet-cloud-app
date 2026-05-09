@@ -6,7 +6,7 @@ const app = express();
 
 app.use(cors({
   origin: ["http://localhost:5173" ,
-  "https://crochet-cloud-app.vercel.app/dashboard"],
+  "https://crochet-cloud-app.vercel.app"],
   credentials: true
 }));
 app.use(express.json());
